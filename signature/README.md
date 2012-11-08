@@ -3,6 +3,9 @@ Signature
 
 Compile:
 
+Signature use NSStrinAdditions.h header.
+Please download from [here](http://sugartin.info/2011/12/12/nsdata-to-base64-nsstring-base64-nsstring-to-nsdata-conversionencoding/ "here").
+
     $ gcc -framework Foundation Signer.m Request.m main.m -o signature
 
 And then execute:
