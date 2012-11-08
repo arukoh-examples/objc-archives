@@ -22,7 +22,6 @@
 
 -(NSString *) sign:(NSString *)key {
   return [Signer sign:[self stringToSign] withKey:key];
-//  return [NSString stringWithFormat:@"%@,%@", key, ];
 }
 
 -(void) dealloc {
@@ -54,7 +53,7 @@
         [self urlencode:key],
         [self urlencode:value]]];
   }
-  return [mar componentsJoinedByString:@","];
+  return [mar componentsJoinedByString:@"&"];
 }
 
 -(NSString *) urlencode:(NSString *)text {

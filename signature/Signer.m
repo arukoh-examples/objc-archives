@@ -1,20 +1,20 @@
 #import "Signer.h"
 
 @interface Signer()
-//  +(NSData *) hmac:(NSString *)plaintext withKey:(NSString *)key;
+  +(NSData *) hmac:(NSString *)plaintext withKey:(NSString *)key;
 @end
 
 @implementation Signer
 
 +(NSString *) sign:(NSString *)plaintext withKey:(NSString *)key {
   NSLog(@"StringToSign: %@", plaintext);
-  return plaintext;
-//  return [[Signer hmac:plaintext withKey:key] stringEncodedWithBase64];
+//  return plaintext;
+  NSData *data = [Signer hmac:plaintext withKey:key];
+  return [NSString base64StringFromData:data length:[data length]];
 }
 
 // private methods
 
-/*
 +(NSData *) hmac:(NSString *)plaintext withKey:(NSString *)key {
   const char *cKey  = [key cStringUsingEncoding:NSUTF8StringEncoding];
   const char *cData = [plaintext cStringUsingEncoding:NSUTF8StringEncoding];
@@ -24,6 +24,5 @@
 
   return [[[NSData alloc] initWithBytes:cHMAC length:sizeof(cHMAC)] autorelease];
 }
-*/
 
 @end

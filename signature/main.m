@@ -1,6 +1,6 @@
 #import <stdio.h>
 #import <Foundation/Foundation.h>
-#import <Request.h>
+#import "Request.h"
 
 int main(int argc, char **argv) {
   NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];

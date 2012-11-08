@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import <Signer.h>
+#import "Signer.h"
 
 @interface Request :NSObject {
   NSString *method;

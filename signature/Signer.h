@@ -1,5 +1,6 @@
 #import <Foundation/Foundation.h>
-//#import <CommonCrypto/CommonHMAC.h>
+#import <CommonCrypto/CommonHMAC.h>
+#import "NSStrinAdditions.h"
 
 @interface Signer :NSObject {
 }
