@@ -8,7 +8,6 @@
 
 +(NSString *) sign:(NSString *)plaintext withKey:(NSString *)key {
   NSLog(@"StringToSign: %@", plaintext);
-//  return plaintext;
   NSData *data = [Signer hmac:plaintext withKey:key];
   return [NSString base64StringFromData:data length:[data length]];
 }
